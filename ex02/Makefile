@@ -1,5 +1,5 @@
-NAME	= convert
-SRCS	= main.cpp Data.cpp
+NAME	= Base
+SRCS	= main.cpp
 
 CC		= c++
 FLAGS	= -Wall -Wextra -Werror -std=c++98 -pedantic
