@@ -10,42 +10,6 @@
 # define INT_MIN -2147483648
 #endif
 
-// int handlePseudo(std::string input)
-// {
-// 	int	i;
-// 	std::string pseudoArr[8] = {"inff", "+inff", "-inff", "nanf", "inf", "+inf", "-inf", "nan"};
-	
-// 	for (i = 0; i < 8; i++)
-// 		if (!input.compare(pseudoArr[i]))
-// 			break;
-// 	if (i < 8)
-// 	{
-// 		//print char
-// 		std::cout << "char: Non displayable" << std::endl;
-// 		//print int
-// 		std::cout << "int: Non displayable" << std::endl;
-// 		//print float
-// 		std::string toPrint;
-// 		if (i < 4)
-// 			toPrint = pseudoArr[i];
-// 		else if (i == 7)
-// 			toPrint = "nanf";
-// 		else
-// 			toPrint = "Undefined behavior";
-// 		std::cout << "float: " << toPrint << std::endl;
-// 		//print double
-// 		if (i > 4)
-// 			toPrint = pseudoArr[i];
-// 		else if (i == 3)
-// 			toPrint = "nan";
-// 		else
-// 			toPrint = "Undefined behavior";
-// 		std::cout << "double: " << toPrint << std::endl;
-// 		return (1);
-// 	}
-// 	return (0);
-// }
-
 /*
 gets called when only one character is given as input
 */
@@ -78,8 +42,6 @@ int main(int argc, char **argv)
 	//sets the standard to using fixed point numbers and the precision of 1
 	std::cout << std::fixed << std::setprecision(1);
 
-	// if (handlePseudo(argv[1]))
-	// 	return (0);
 	if (isdigit(argv[1][0]) || input.size() > 1)
 	{
 		endptr = new char*;
