@@ -12,8 +12,11 @@ Data::Data(const Data &rhs)
 
 Data& Data::operator=(const Data &rhs)
 {
-	delete this;
-	*this = rhs;
+	this->_string = rhs._string;
+	this->_c = rhs._c;
+	this->_i = rhs._i;
+	this->_f = rhs._f;
+	this->_d = rhs._d;
 	return (*this);
 }
 
@@ -72,6 +75,9 @@ void Data::setDouble(double d)
 	this->_d = d;
 }
 
+/*
+reinterpret_cast is changing the bits which show which datatype the variable is
+*/
 uintptr_t Data::serialize(Data *ptr)
 {
 	return (reinterpret_cast<uintptr_t>(ptr));
