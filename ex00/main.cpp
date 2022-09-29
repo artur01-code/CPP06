@@ -71,13 +71,11 @@ int main(int argc, char **argv)
 		return (1);
 	}
 	std::string input = argv[1];
-	// int			i;
-	// char		c;
 	float		f = 0;
 	double		d = 0;
 	char **endptr;
 
-	//sets the standart to using fixed point numbers and the precision of 1
+	//sets the standard to using fixed point numbers and the precision of 1
 	std::cout << std::fixed << std::setprecision(1);
 
 	// if (handlePseudo(argv[1]))
@@ -86,9 +84,7 @@ int main(int argc, char **argv)
 	{
 		endptr = new char*;
 		d = std::strtod(argv[1], endptr);
-		// f = std::strtof(argv[1], endptr);
 		f = static_cast<float>(d);
-		// != f because its a float number
 		if (**endptr && (strlen(*endptr) != 1 || **endptr != 'f'))
 		{
 			std::cout << "Error:\n Invalid input. Enter only one character." << std::endl;
@@ -98,15 +94,14 @@ int main(int argc, char **argv)
 	}
 	else
 		return (handleChar(argv[1][0]));
-	//Printing part
-	//check for limits
+
 	//print char
 	if (isprint(f))
 		std::cout << "char: \'" << static_cast<char>(d) << "\'" << std::endl;
 	else
 		std::cout << "char: Non displayable" << std::endl;
 	//print int
-	if (d <= INT_MAX && d >= INT_MIN) //works?
+	if (d <= INT_MAX && d >= INT_MIN)
 		std::cout << "int: " << static_cast<int>(d) << std::endl;
 	else
 		std::cout << "int: Non displayable" << std::endl;

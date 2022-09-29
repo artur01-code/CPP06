@@ -1,6 +1,5 @@
 #include "Data.hpp"
 
-
 int main(void)
 {
 	Data	*	myData = new Data;
